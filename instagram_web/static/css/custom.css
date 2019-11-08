@@ -19,3 +19,8 @@ footer a {
   text-decoration: none;
   color: #303030;
 }
+
+#signup-container {
+  margin: 0px 10vw;
+  padding: 0;
+}
