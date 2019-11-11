@@ -3,7 +3,10 @@ import config
 from flask import Flask
 from models.base_model import db
 from flask_wtf.csrf import CSRFProtect
+from flask_login import LoginManager
+from models.user import User_
 
+login_manager = LoginManager()
 
 
 web_dir = os.path.join(os.path.dirname(
@@ -11,6 +14,7 @@ web_dir = os.path.join(os.path.dirname(
 
 app = Flask('NEXTAGRAM', root_path=web_dir)
 csrf = CSRFProtect(app)
+login_manager.init_app(app)
 
 if os.getenv('FLASK_ENV') == 'production':
     app.config.from_object("config.ProductionConfig")
@@ -29,3 +33,7 @@ def _db_close(exc):
         print(db)
         print(db.close())
     return exc
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User_.get_or_none(id= user_id)

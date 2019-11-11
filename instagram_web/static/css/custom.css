@@ -22,5 +22,62 @@ footer a {
 
 #signup-container {
   margin: 0px 10vw;
+  padding: 20px;
+  background-color: rgba(132, 144, 165, 0.7);
+  border-radius: 3px;
+}
+
+#signin-container {
+  margin: 0px 10vw;
+  padding: 20px;
+  background-color: rgba(132, 144, 165, 0.7);
+  border-radius: 3px;
+}
+
+.flashes {
+  padding: 0px;
+}
+
+#error-404-container {
+  background-color: rgb(179, 178, 178);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  padding: 0px;
+}
+
+#error-404-image {
+  height: 35vh;
+  width: 35vh;
+}
+
+#error-500-container {
+  background-color: rgb(179, 178, 178);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  padding: 0px;
+}
+
+#web-body {
   padding: 0;
 }
+
+#edit-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 5vw;
+  background-color: rgba(132, 144, 165, 0.7);
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.margin-top {
+  margin-top: 10px;
+}
+

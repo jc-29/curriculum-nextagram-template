@@ -1,0 +1,36 @@
+{% extends "_layout.html" %} {% block content %}
+<div id="signin-container">
+        <!-- {% if error %}
+        <p class=error><strong>Error:</strong> {{ error }}
+      {% endif %} -->
+  <h1>Sign In</h1>
+  <!-- {{ current_user.id }} -->
+  <form action="{{ url_for('sessions.login') }}" method="POST">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    <div class="form-group">
+      <label for="exampleInputEmail1">Username:</label>
+      <input
+        name="username"
+        type="text"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter username"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Password:</label>
+      <input
+        name="password"
+        type="password"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="Enter password"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}
