@@ -75,9 +75,34 @@ footer a {
   background-color: rgba(132, 144, 165, 0.7);
   padding: 20px;
   border-radius: 3px;
+  margin-bottom: 20px;
 }
 
 .margin-top {
   margin-top: 10px;
 }
 
+#logout-button {
+  margin-left: 20px;
+}
+
+#redirect-to-signin {
+  margin-top: 10px;
+}
+
+#profile-image {
+  width: 17vw;
+  height: 19vw;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 2px solid white;
+}
+
+#profile-image-form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#profile-image-button {
+  width: 6vw;
+}

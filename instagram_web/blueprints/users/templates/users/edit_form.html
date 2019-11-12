@@ -3,6 +3,31 @@
   <h1>
     Edit User Details
   </h1>
+  <div id="profile-image-container">
+    <img
+      id="profile-image"
+      src="{{current_user.profile_picture}}"
+    />
+    <form
+      id="profile-image-form-container"
+      method="POST"
+      enctype="multipart/form-data"
+      action="{{url_for('users.update_picture', id_=id_)}}"
+    >
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+
+      <input type="file" name="user_file" />
+      <button
+        id="profile-image-button"
+        type="submit"
+        class="btn btn-primary margin-top"
+        id="edit-submit-button"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+  <br />
   <form
     action="{{ url_for('users.update',id_=current_user.id) }}"
     method="POST"

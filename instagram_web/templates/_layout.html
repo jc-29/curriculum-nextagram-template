@@ -23,9 +23,11 @@
     </title>
   </head>
   <body id="web-body">
-    {% with messages = get_flashed_messages(with_categories=true) %} {% if
-    messages %} {% for category,message in messages %} {% if
-    current_user.is_authenticated %}
+    {% if current_user.is_authenticated %} {% include 'navbar.html' %} 
+    {% endif %} 
+    {% with messages = get_flashed_messages(with_categories=true) %} 
+    {% if messages %} 
+    {% for category,message in messages %} 
     <div
       id="login-flash"
       class="alert alert-{{ category }} alert-dismissible fade show"
@@ -41,15 +43,15 @@
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-    {% endif %} {% endfor %} {% endif %} {% endwith %} {% block content %} {%
+    {% endfor %} {% endif %} {% endwith %} {% block content %} {%
     endblock %}
-    <footer>
+    <!-- <footer>
       Made with &hearts; at
       <a
         target="_blank"
         href="https://www.nextacademy.com/?utm_source=github&utm_medium=student-challenge&utm_campaign=flask-nextagram"
         >NEXT Academy</a
       >
-    </footer>
+    </footer> -->
   </body>
 </html>

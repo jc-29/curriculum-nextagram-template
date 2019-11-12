@@ -1,6 +1,6 @@
 {% extends "_layout.html" %} {% block content %}
 <div id="signin-container">
-        <!-- {% if error %}
+  <!-- {% if error %}
         <p class=error><strong>Error:</strong> {{ error }}
       {% endif %} -->
   <h1>Sign In</h1>
@@ -30,7 +30,11 @@
         placeholder="Enter password"
       />
     </div>
+
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+  <div id="redirect-to-signin">
+    <a href="/users/new">Don't have an account? Sign up here!</a>
+  </div>
 </div>
 {% endblock %}
